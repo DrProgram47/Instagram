@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Instagram - Clone Coding</title>
+    <style>
+        @import url(css/default.css);
+        @import url(css/gnb.css);
+        @import url(css/feed.css);
+    </style>
+
+    <script>
+        let is_liked = true;
+        function like() {
+            if (is_liked == true) {
+                $('#heart').attr('src', './Instagram/image/icons/12.png')
+                is_liked = false;
+            } else {
+                $('#heart').attr('src', './Instagram/image/icons/5.png')
+                is_liked = true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="gnb flex-row">
+        <div class="gnb-content flex-row">
+            <div class="logo flex-row">
+                <img width="102" src="./logo_instagram.png/logo_instagram.png">
+                <i class="bi bi-chevron-down"></i>
+            </div>
+
+            <div class="search-box flex-row">
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="icons flex-row">
+                <img src="./Instagram/image/icons/1.png">
+                <img src="./Instagram/image/icons/2.png">
+                <img src="./Instagram/image/icons/3.png">
+                <img src="./Instagram/image/icons/4.png">
+                <img src="./Instagram/image/icons/5.png">
+                <div class="pp"><img width="32" src="./Instagram/image/icons/13.jpeg"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main flex-row">
+        <div class="feed flex-col">
+            <div class="profile flex-row">
+                <div class="img-warp">
+                    <img width="32" src="./Instagram/image/profile/1.png" >
+                </div>
+                <p class="flex-col">
+                    <span>apple</span>
+                    <span>UnderGround, Queensland</span>
+                </p>
+                <img width="22" src="./Instagram/image/icons/7.png">
+            </div>
+            <div class="imgs swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./Instagram/image/post/1.png"></div>
+                    <div class="swiper-slide"><img src="./Instagram/image/post/2.png"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="feed-icons flex-row">
+                <img id="heart" onclick="like()" src="./Instagram/image/icons/5.png">
+                <img src="./Instagram/image/icons/9.png">
+                <img src="./Instagram/image/icons/2.png">
+                <img src="./Instagram/image/icons/10.png">
+            </div>
+            <div class="likes">10.384 likes</div>
+            <div class="comments">
+                <span class="title">apple</span>
+                "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                <span class="hashtag">#IPhone</span>
+            </div>
+            <div class="count">View all 194 comments</div>
+            <div class="time">20 Hours Ago</div>
+        </div>
+        <div class="account flex-col">
+            <div class="account-content">
+                <li class="flex-row">
+                    <div class="img-warp">
+                        <img width="58" src="./Instagram/image/icons/13.jpeg">
+                    </div>
+                    <p class="flex-col">
+                        <span>fikri_uhuyy</span>
+                        <span>perkoro</span>
+                    </p>
+                    <a href="#">Switch</a>
+                </li>
+
+                <li class="suggestion flex-row">
+                    <span>Suggestions for you</span>
+                    <a href="#">See all</a>
+                </li>
+
+                <li class="flex-row friends">
+                    <div class="img-warp">
+                        <img width="32" src="./Instagram/image/follower/1.png">
+                    </div>
+                    <p class="flex-col">
+                        <span>maul</span>
+                        <span>mulkrak</span>
+                    </p>
+                    <a href="#">Follow</a>
+                </li>
+
+                <li class="flex-row friends">
+                    <div class="img-warp">
+                        <img width="32" src="./Instagram/image/follower/2.png">
+                    </div>
+                    <p class="flex-col">
+                        <span>ilham</span>
+                        <span>paham</span>
+                    </p>
+                    <a href="#">Follow</a>
+                </li>
+
+                <li class="flex-row friends">
+                    <div class="img-warp">
+                        <img width="32" src="./Instagram/image/follower/3.png">
+                    </div>
+                    <p class="flex-col">
+                        <span>abel</span>
+                        <span>belkrak</span>
+                    </p>
+                    <a href="#">Follow</a>
+                </li>
+
+                <li class="flex-row friends">
+                    <div class="img-warp">
+                        <img width="32" src="./Instagram/image/follower/4.png">
+                    </div>
+                    <p class="flex-col">
+                        <span>Fourth</span>
+                        <span>Popular</span>
+                    </p>
+                    <a href="#">Follow</a>
+                </li>
+                <li class="flex-row friends">
+                    <div class="img-warp">
+                        <img width="32" src="./Instagram/image/follower/5.png">
+                    </div>
+                    <p class="flex-col">
+                        <span>Fifth</span>
+                        <span>Popular</span>
+                    </p>
+                    <a href="#">Follow</a>
+                </li>
+            </div>
+
+            <div class="about">
+                <a href="#">About</a>
+                <a href="#">Help</a>
+                <a href="#">Press</a>
+                <a href="#">API</a>
+                <a href="#">Jobs</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Location</a>
+                <a href="#">Language</a>
+                <a href="#">English</a>
+            </div>
+            <div class="name">
+                @2024 Instagram Page
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+});
+    </script>
+</body>
+
+</html>
